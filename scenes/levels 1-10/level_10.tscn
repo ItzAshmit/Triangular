@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=3 uid="uid://dyipd4tbfttyt"]
+
+[ext_resource type="PackedScene" uid="uid://6rpyblpeohkd" path="res://scenes/game.tscn" id="1_jmuob"]
+[ext_resource type="PackedScene" uid="uid://irugkrmftm02" path="res://scenes/BARS/blue_bar.tscn" id="2_sh1ji"]
+[ext_resource type="PackedScene" uid="uid://dn36f5tu6b7ye" path="res://scenes/BARS/red_bar.tscn" id="3_023ed"]
+[ext_resource type="PackedScene" uid="uid://d4l6huosnouwn" path="res://scenes/BARS/rotate_bar.tscn" id="4_pmgo6"]
+[ext_resource type="PackedScene" uid="uid://bblrpk3j4c41s" path="res://scenes/BARS/scaling_bar.tscn" id="5_vt25q"]
+[ext_resource type="PackedScene" uid="uid://l3oyijmv1xud" path="res://scenes/BARS/level_end_bar.tscn" id="6_qah4s"]
+[ext_resource type="PackedScene" uid="uid://oegu8wqx7eab" path="res://scenes/BARS/ending_bar.tscn" id="7_xm8uk"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_sh1ji"]
+
+[node name="game" instance=ExtResource("1_jmuob")]
+
+[node name="Polygon2D" parent="background" index="0"]
+texture = SubResource("ViewportTexture_sh1ji")
+
+[node name="Panel" parent="background" index="6"]
+visible = false
+
+[node name="base of blue bar" parent="obstacles" index="0" instance=ExtResource("2_sh1ji")]
+position = Vector2(1076, 3355)
+scale = Vector2(0.323028, 18.4135)
+direction = "Up"
+
+[node name="base of blue bar2" parent="obstacles" index="1" instance=ExtResource("2_sh1ji")]
+position = Vector2(-1395, 3799)
+scale = Vector2(0.923201, 15.2567)
+direction = "Up"
+
+[node name="base of red bar" parent="obstacles" index="2" instance=ExtResource("3_023ed")]
+position = Vector2(4272, 1139)
+scale = Vector2(8.36853, 3.06369)
+speed = -3000
+
+[node name="base_of_rotate_bar" parent="obstacles" index="3" instance=ExtResource("4_pmgo6")]
+position = Vector2(-8256, -65)
+scale = Vector2(2.75034, 3.20468)
+speed = -2500
+direction = "Right"
+
+[node name="base_of_zig_zag_bar" parent="obstacles" index="4" instance=ExtResource("5_vt25q")]
+position = Vector2(2301, -3802)
+direction = "Down"
+
+[node name="base_of_rotate_bar2" parent="obstacles" index="5" instance=ExtResource("4_pmgo6")]
+position = Vector2(-2851, -4857)
+scale = Vector2(2.57847, 1.81712)
+direction = "Down"
+
+[node name="base_of_zig_zag_bar2" parent="obstacles" index="6" instance=ExtResource("5_vt25q")]
+position = Vector2(-10198, 809)
+direction = "Right"
+
+[node name="base_of_rotate_bar3" parent="obstacles" index="7" instance=ExtResource("4_pmgo6")]
+position = Vector2(1580, -9579)
+scale = Vector2(4.00112, 4.33331)
+direction = "Down"
+
+[node name="base_of_rotate_bar4" parent="obstacles" index="8" instance=ExtResource("4_pmgo6")]
+position = Vector2(-1281, 14526)
+scale = Vector2(-4.09102, 4.56181)
+direction = "Up"
+
+[node name="base of red bar2" parent="obstacles" index="9" instance=ExtResource("3_023ed")]
+position = Vector2(-1790, 20167)
+scale = Vector2(0.691051, -38.4876)
+direction = "Up"
+
+[node name="base of red bar3" parent="obstacles" index="10" instance=ExtResource("3_023ed")]
+position = Vector2(1113, 20221)
+scale = Vector2(0.697982, -41.9652)
+direction = "Up"
+
+[node name="base of blue bar3" parent="obstacles" index="11" instance=ExtResource("2_sh1ji")]
+position = Vector2(-21270, 1492)
+scale = Vector2(11.0781, -4.81187)
+direction = "Right"
+
+[node name="base of blue bar4" parent="obstacles" index="12" instance=ExtResource("2_sh1ji")]
+position = Vector2(-20942, 3299)
+scale = Vector2(10.9531, -2.84895)
+direction = "Right"
+
+[node name="base of blue bar5" parent="obstacles" index="13" instance=ExtResource("2_sh1ji")]
+position = Vector2(-29156, -479)
+scale = Vector2(17.0933, 2.92438)
+direction = "Right"
+
+[node name="base of red bar4" parent="obstacles" index="14" instance=ExtResource("3_023ed")]
+position = Vector2(-29156, -3272)
+scale = Vector2(17.0456, 6.885)
+direction = "Right"
+
+[node name="Area2D" parent="obstacles" index="15" instance=ExtResource("6_qah4s")]
+position = Vector2(-25071, -1899)
+scale = Vector2(5.17328, 6.09031)
+direction = "Right"
+
+[node name="Area2D2" parent="obstacles" index="16" instance=ExtResource("7_xm8uk")]
+position = Vector2(76860, -3131)
+rotation = 1.57079
+scale = Vector2(10.1689, 12.7295)

@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqeeqs52fvmkm"]
+
+[ext_resource type="PackedScene" uid="uid://6rpyblpeohkd" path="res://scenes/game.tscn" id="1_cqu33"]
+[ext_resource type="PackedScene" uid="uid://d14fycutjin1n" path="res://scenes/BARS/info_bar.tscn" id="2_74ikq"]
+[ext_resource type="PackedScene" uid="uid://l3oyijmv1xud" path="res://scenes/BARS/level_end_bar.tscn" id="3_n30ef"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mrjwl"]
+
+[node name="game" instance=ExtResource("1_cqu33")]
+
+[node name="Polygon2D" parent="background" index="0"]
+texture = SubResource("ViewportTexture_mrjwl")
+
+[node name="Panel" parent="background" index="6"]
+visible = false
+
+[node name="base of red bar" parent="." index="7" instance=ExtResource("2_74ikq")]
+position = Vector2(9857, -1805)
+scale = Vector2(13.482, 15.8935)
+text = "i didn't expect that you will"
+
+[node name="base of red bar2" parent="." index="8" instance=ExtResource("2_74ikq")]
+position = Vector2(21352, -1843)
+scale = Vector2(13.482, 15.8935)
+text = "come this far"
+
+[node name="base of red bar3" parent="." index="9" instance=ExtResource("2_74ikq")]
+position = Vector2(34422, -2564)
+scale = Vector2(21.8374, 19.2237)
+text = "now wait for new features "
+
+[node name="base of red bar4" parent="." index="10" instance=ExtResource("2_74ikq")]
+position = Vector2(38935, -1111)
+scale = Vector2(21.8374, 19.2237)
+text = "and levels to come"
+
+[node name="Area2D4" parent="." index="11" instance=ExtResource("3_n30ef")]
+position = Vector2(58276, 1477)
+rotation = 3.14159
+scale = Vector2(12.5704, -9.32215)

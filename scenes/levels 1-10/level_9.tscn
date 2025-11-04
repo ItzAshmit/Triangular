@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=3 uid="uid://f02exoa1kuna"]
+
+[ext_resource type="PackedScene" uid="uid://6rpyblpeohkd" path="res://scenes/game.tscn" id="1_uiy1k"]
+[ext_resource type="PackedScene" uid="uid://bblrpk3j4c41s" path="res://scenes/BARS/scaling_bar.tscn" id="2_nrf4y"]
+[ext_resource type="PackedScene" uid="uid://l3oyijmv1xud" path="res://scenes/BARS/level_end_bar.tscn" id="3_haikc"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nrf4y"]
+
+[node name="game" instance=ExtResource("1_uiy1k")]
+
+[node name="Polygon2D" parent="background" index="0"]
+texture = SubResource("ViewportTexture_nrf4y")
+
+[node name="Polygon2D2" parent="background" index="1"]
+polygon = PackedVector2Array(-105.952, -53.8779, -7.791, -163.113, 222.193, 164.464, 19.9026, 29.8635)
+
+[node name="Area2D" parent="obstacles" index="0" instance=ExtResource("2_nrf4y")]
+position = Vector2(8360, -1615)
+
+[node name="base_of_zig_zag_bar" parent="obstacles" index="1" instance=ExtResource("2_nrf4y")]
+position = Vector2(12114, 248)
+
+[node name="base_of_zig_zag_bar2" parent="obstacles" index="2" instance=ExtResource("2_nrf4y")]
+position = Vector2(-900, -5099)
+rotation = 1.57079
+direction = "Down"
+
+[node name="base_of_zig_zag_bar3" parent="obstacles" index="3" instance=ExtResource("2_nrf4y")]
+position = Vector2(-9432, 1671)
+direction = "Right"
+
+[node name="base_of_zig_zag_bar4" parent="obstacles" index="4" instance=ExtResource("2_nrf4y")]
+position = Vector2(1356, 6029)
+rotation = -1.57079
+direction = "Up"
+
+[node name="base_of_zig_zag_bar5" parent="obstacles" index="5" instance=ExtResource("2_nrf4y")]
+position = Vector2(-3211, 8117)
+rotation = 1.57079
+direction = "Up"
+
+[node name="base_of_zig_zag_bar6" parent="obstacles" index="6" instance=ExtResource("2_nrf4y")]
+position = Vector2(3132, 11560)
+direction = "Up"
+
+[node name="base_of_zig_zag_bar7" parent="obstacles" index="7" instance=ExtResource("2_nrf4y")]
+position = Vector2(-2871, 12403)
+rotation = 1.57079
+direction = "Up"
+
+[node name="base_of_zig_zag_bar8" parent="obstacles" index="8" instance=ExtResource("2_nrf4y")]
+position = Vector2(-15896, -1460)
+direction = "Right"
+
+[node name="base_of_zig_zag_bar9" parent="obstacles" index="9" instance=ExtResource("2_nrf4y")]
+position = Vector2(-19424, 2156)
+direction = "Right"
+
+[node name="base_of_zig_zag_bar10" parent="obstacles" index="10" instance=ExtResource("2_nrf4y")]
+position = Vector2(-4342, -10192)
+direction = "Down"
+
+[node name="base_of_zig_zag_bar11" parent="obstacles" index="11" instance=ExtResource("2_nrf4y")]
+position = Vector2(2361, -16101)
+rotation = 1.57079
+direction = "Down"
+
+[node name="Area2D2" parent="obstacles" index="12" instance=ExtResource("3_haikc")]
+position = Vector2(-4218, -24418)
+direction = "Down"
+
+[node name="Area2D3" parent="obstacles" index="13" instance=ExtResource("3_haikc")]
+position = Vector2(-3235, -24402)
+scale = Vector2(1.24398, 2.66911)
+direction = "Down"
+
+[node name="Area2D4" parent="obstacles" index="14" instance=ExtResource("3_haikc")]
+position = Vector2(-2198, -24407)
+scale = Vector2(1.92325, 5.25665)
+direction = "Down"
+
+[node name="Area2D5" parent="obstacles" index="15" instance=ExtResource("3_haikc")]
+position = Vector2(-588, -24420)
+scale = Vector2(2.72437, 8.4255)
+direction = "Down"
+
+[node name="Area2D6" parent="obstacles" index="16" instance=ExtResource("3_haikc")]
+position = Vector2(1497, -24437)
+scale = Vector2(1.75595, 4.87622)
+direction = "Down"
+
+[node name="Area2D7" parent="obstacles" index="17" instance=ExtResource("3_haikc")]
+position = Vector2(3082, -24447)
+scale = Vector2(1.58694, 2.89722)
+direction = "Down"
+
+[node name="Area2D8" parent="obstacles" index="18" instance=ExtResource("3_haikc")]
+position = Vector2(4405, -24414)
+direction = "Down"

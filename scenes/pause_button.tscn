@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://vkmnk0u6loy5"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 16.0
+offset_right = 638.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 64
+text = "RESTART"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 263.0
+offset_right = 812.0
+offset_bottom = 399.0
+theme_override_font_sizes/font_size = 64
+text = "SETTINGS"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 465.0
+offset_right = 449.0
+offset_bottom = 601.0
+theme_override_font_sizes/font_size = 64
+text = "MAIN MENU"

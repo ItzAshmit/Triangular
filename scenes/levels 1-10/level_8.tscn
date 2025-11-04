@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckrhy74mra2r5"]
+
+[ext_resource type="PackedScene" uid="uid://6rpyblpeohkd" path="res://scenes/game.tscn" id="1_oordf"]
+[ext_resource type="PackedScene" uid="uid://d4l6huosnouwn" path="res://scenes/BARS/rotate_bar.tscn" id="2_bi6ig"]
+[ext_resource type="PackedScene" uid="uid://dn36f5tu6b7ye" path="res://scenes/BARS/red_bar.tscn" id="3_db16i"]
+[ext_resource type="PackedScene" uid="uid://irugkrmftm02" path="res://scenes/BARS/blue_bar.tscn" id="4_dpok0"]
+[ext_resource type="PackedScene" uid="uid://l3oyijmv1xud" path="res://scenes/BARS/level_end_bar.tscn" id="5_an40f"]
+[ext_resource type="PackedScene" uid="uid://oegu8wqx7eab" path="res://scenes/BARS/ending_bar.tscn" id="6_ojjjk"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_bi6ig"]
+
+[node name="game" instance=ExtResource("1_oordf")]
+
+[node name="Polygon2D" parent="background" index="0"]
+texture = SubResource("ViewportTexture_bi6ig")
+
+[node name="Area2D" parent="obstacles" index="0" instance=ExtResource("2_bi6ig")]
+position = Vector2(9076, 1728)
+scale = Vector2(4.08574, 4.74245)
+
+[node name="base_of_rotate_bar" parent="obstacles" index="1" instance=ExtResource("2_bi6ig")]
+position = Vector2(9224, -779)
+scale = Vector2(3.9751, 5.04696)
+
+[node name="base_of_rotate_bar2" parent="obstacles" index="2" instance=ExtResource("2_bi6ig")]
+position = Vector2(15522, -365)
+scale = Vector2(4.21788, 5.19616)
+
+[node name="base of red bar" parent="obstacles" index="3" instance=ExtResource("3_db16i")]
+position = Vector2(20537, 876)
+scale = Vector2(4.65684, 3.25726)
+
+[node name="base of blue bar" parent="obstacles" index="4" instance=ExtResource("4_dpok0")]
+position = Vector2(20756, -2082)
+scale = Vector2(4.40347, 3.06944)
+
+[node name="base of red bar2" parent="obstacles" index="5" instance=ExtResource("3_db16i")]
+position = Vector2(24972, -1205)
+scale = Vector2(6.78269, 2.34882)
+
+[node name="base_of_rotate_bar3" parent="obstacles" index="6" instance=ExtResource("2_bi6ig")]
+position = Vector2(28757, 114)
+scale = Vector2(2.12416, 2.2123)
+
+[node name="base of blue bar2" parent="obstacles" index="7" instance=ExtResource("4_dpok0")]
+position = Vector2(30414, 303)
+scale = Vector2(25.7296, -2.0375)
+
+[node name="base of blue bar3" parent="obstacles" index="8" instance=ExtResource("4_dpok0")]
+position = Vector2(34611, 699)
+
+[node name="base of red bar3" parent="obstacles" index="9" instance=ExtResource("3_db16i")]
+position = Vector2(37177, 1379)
+
+[node name="base of blue bar4" parent="obstacles" index="10" instance=ExtResource("4_dpok0")]
+position = Vector2(39681, 575)
+
+[node name="base of blue bar5" parent="obstacles" index="11" instance=ExtResource("4_dpok0")]
+position = Vector2(33839, 2275)
+
+[node name="base of red bar4" parent="obstacles" index="12" instance=ExtResource("3_db16i")]
+position = Vector2(38785, 2276)
+
+[node name="base of blue bar6" parent="obstacles" index="13" instance=ExtResource("4_dpok0")]
+position = Vector2(41412, 1503)
+
+[node name="Area2D2" parent="obstacles" index="14" instance=ExtResource("5_an40f")]
+position = Vector2(50037, -229)
+scale = Vector2(6.38472, 6.58642)
+
+[node name="Area2D3" parent="obstacles" index="15" instance=ExtResource("6_ojjjk")]
+position = Vector2(62713, -1599)
+rotation = 1.57079
+scale = Vector2(5.75777, 10.9345)

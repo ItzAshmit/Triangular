@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://irugkrmftm02"]
+
+[ext_resource type="PackedScene" uid="uid://cm2tj1dyu5qam" path="res://scenes/obstacle_template.tscn" id="1_dgmve"]
+
+[node name="base of blue bar" instance=ExtResource("1_dgmve")]
+collision_layer = 0
+collision_mask = 2
+speed = -2000
+
+[node name="ColorRect" parent="." index="2"]
+color = Color(0.0980392, 1, 1, 1)
+
+[node name="ColorRect2" parent="." index="3"]
+z_index = 2
+color = Color(0, 0.823529, 0.823529, 1)
+
+[node name="ColorRect3" parent="." index="4"]
+z_index = 2
+color = Color(0, 0.823015, 0.823199, 1)
+
+[node name="ColorRect4" parent="." index="5"]
+z_index = 2
+color = Color(0, 0.823529, 0.823529, 1)

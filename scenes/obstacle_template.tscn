@@ -1,0 +1,443 @@
+[gd_scene load_steps=30 format=3 uid="uid://cm2tj1dyu5qam"]
+
+[ext_resource type="Script" uid="uid://ddk43mc7iq28m" path="res://scriptes/area_2d.gd" id="1_p4076"]
+[ext_resource type="AudioStream" uid="uid://dq6y17h2gofmt" path="res://assests/hitHurt.wav" id="2_xouol"]
+[ext_resource type="Script" uid="uid://bvkainp3155q5" path="res://scriptes/game_over.gd" id="3_rfxrm"]
+[ext_resource type="Script" uid="uid://cojtqno7cdr3g" path="res://scriptes/close.gd" id="3_rj624"]
+[ext_resource type="FontFile" uid="uid://du0mijxm72d4r" path="res://assests/Geotalism-6YKWx.ttf" id="5_xq75l"]
+[ext_resource type="Texture2D" uid="uid://dnxmm6lxlq2ld" path="res://assests/front_hand_35dp_75FBFD_FILL0_wght400_GRAD0_opsz40.png" id="6_mbysh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfxrm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 200
+border_width_top = 200
+border_width_right = 200
+border_width_bottom = 200
+border_color = Color(0, 0.8, 0.8, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+shadow_color = Color(1, 0, 0, 0.113725)
+shadow_size = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlst3"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajaar"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pijx6"]
+bg_color = Color(0, 0.6, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7ilg"]
+bg_color = Color(0, 0.6, 0.6, 0)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0, 0.6, 0.6, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbfsc"]
+bg_color = Color(0.856494, 3.65794e-06, 8.66354e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6s8ha"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0.854902, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mf7gj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0.752941, 1, 1)
+shadow_color = Color(0.0941176, 0.639216, 0.639216, 0.611765)
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tsx7c"]
+bg_color = Color(0.0705882, 0, 0.215686, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kn054"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 50
+border_width_top = 50
+border_width_bottom = 50
+border_color = Color(0.176471, 0, 0.192157, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kodw"]
+bg_color = Color(0.0705882, 0, 0.215686, 0)
+border_width_left = 50
+border_width_top = 50
+border_width_bottom = 50
+border_color = Color(0.0705882, 0, 0.215686, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j0u53"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fbg7b"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 200
+border_width_top = 200
+border_width_right = 200
+border_width_bottom = 200
+border_color = Color(0, 0.8, 0.8, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_bottom_right = 10
+shadow_color = Color(1, 0, 0, 0.113725)
+shadow_size = 500
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbysh"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xq75l"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_caouy"]
+bg_color = Color(0.856494, 3.65794e-06, 8.66354e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wjhql"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0.854902, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="Animation" id="Animation_41stm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o4fsm"]
+resource_name = "game_over"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k4nvw"]
+_data = {
+&"RESET": SubResource("Animation_41stm"),
+&"game_over": SubResource("Animation_o4fsm")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0xi7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xouol"]
+size = Vector2(101, 20)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xq75l"]
+
+[node name="Area2D" type="Area2D"]
+texture_filter = 1
+texture_repeat = 2
+gravity_point = true
+gravity_point_unit_distance = 2.345
+script = ExtResource("1_p4076")
+speed = -1200
+
+[node name="extra(not for bars to use intentionally)" type="Node" parent="."]
+process_mode = 3
+
+[node name="Panel" type="Panel" parent="extra(not for bars to use intentionally)"]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+z_index = 5
+offset_left = 39.0
+offset_top = -3310.0
+offset_right = 5823.0
+offset_bottom = -67.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rfxrm")
+
+[node name="restart" type="Button" parent="extra(not for bars to use intentionally)/Panel"]
+z_index = 5
+layout_mode = 0
+offset_left = 1155.0
+offset_top = 653.0
+offset_right = 2764.0
+offset_bottom = 969.0
+theme_override_font_sizes/font_size = 256
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlst3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ajaar")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ajaar")
+text = "RESTART?"
+script = ExtResource("3_rj624")
+
+[node name="resume" type="Button" parent="extra(not for bars to use intentionally)/Panel"]
+z_index = 5
+layout_mode = 0
+offset_left = 3359.0
+offset_top = 1384.0
+offset_right = 4800.0
+offset_bottom = 1700.0
+theme_override_font_sizes/font_size = 256
+theme_override_styles/normal = SubResource("StyleBoxFlat_pijx6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q7ilg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q7ilg")
+text = "resume!"
+script = ExtResource("3_rj624")
+
+[node name="main menu" type="Button" parent="extra(not for bars to use intentionally)/Panel"]
+z_index = 5
+layout_mode = 0
+offset_left = 1920.0
+offset_top = 2187.0
+offset_right = 3529.0
+offset_bottom = 2503.0
+theme_override_font_sizes/font_size = 256
+theme_override_styles/normal = SubResource("StyleBoxFlat_fbfsc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6s8ha")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6s8ha")
+text = "main menu?"
+script = ExtResource("3_rj624")
+
+[node name="Label" type="Label" parent="extra(not for bars to use intentionally)/Panel"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 174.0
+offset_bottom = 85.0
+scale = Vector2(7.84602, 6.21938)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_mf7gj")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="levels" type="Button" parent="extra(not for bars to use intentionally)/Panel"]
+z_index = 5
+layout_mode = 0
+offset_left = 3799.0
+offset_top = 1958.0
+offset_right = 5645.0
+offset_bottom = 2574.0
+theme_override_font_sizes/font_size = 256
+theme_override_styles/normal = SubResource("StyleBoxFlat_tsx7c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kn054")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8kodw")
+text = "select
+levels!!"
+alignment = 0
+script = ExtResource("3_rj624")
+
+[node name="OptionButton" type="OptionButton" parent="extra(not for bars to use intentionally)/Panel/levels"]
+unique_name_in_owner = true
+z_index = -2
+z_as_relative = false
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = -5.0
+offset_right = 1842.0
+offset_bottom = 617.0
+theme_override_font_sizes/font_size = 128
+theme_override_styles/normal = SubResource("StyleBoxFlat_j0u53")
+item_count = 2
+popup/item_0/text = "LEVEL_1"
+popup/item_0/id = 0
+popup/item_1/text = "LEVEL_2"
+popup/item_1/id = 1
+
+[node name="game_over" type="Panel" parent="extra(not for bars to use intentionally)"]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+z_index = 5
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -2311.0
+offset_top = -3636.0
+offset_right = 4682.0
+offset_bottom = 548.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxFlat_fbg7b")
+script = ExtResource("3_rfxrm")
+
+[node name="restart" type="Button" parent="extra(not for bars to use intentionally)/game_over"]
+z_index = 5
+layout_mode = 0
+offset_left = 483.5
+offset_top = 2016.0
+offset_right = 2153.5
+offset_bottom = 2332.0
+theme_override_font_sizes/font_size = 256
+theme_override_styles/normal = SubResource("StyleBoxFlat_mbysh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xq75l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xq75l")
+text = "RESTART?"
+script = ExtResource("3_rj624")
+
+[node name="main menu" type="Button" parent="extra(not for bars to use intentionally)/game_over"]
+z_index = 5
+layout_mode = 0
+offset_left = 4338.5
+offset_top = 2801.0
+offset_right = 6184.5
+offset_bottom = 3117.0
+theme_override_font_sizes/font_size = 256
+theme_override_styles/normal = SubResource("StyleBoxFlat_caouy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wjhql")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wjhql")
+text = "main menu?"
+script = ExtResource("3_rj624")
+
+[node name="AnimationPlayer(game_over)" type="AnimationPlayer" parent="extra(not for bars to use intentionally)/game_over"]
+unique_name_in_owner = true
+root_node = NodePath("../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_k4nvw")
+}
+
+[node name="Label" type="Label" parent="extra(not for bars to use intentionally)/game_over"]
+z_index = 5
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 375.0
+offset_top = 447.0
+offset_right = 651.0
+offset_bottom = 541.0
+scale = Vector2(7.91011, 5.52441)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_w0xi7")
+text = "score --"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="PAUSE" type="Button" parent="extra(not for bars to use intentionally)"]
+unique_name_in_owner = true
+process_mode = 3
+visible = false
+z_index = 5
+offset_left = 5003.0
+offset_top = -3219.0
+offset_right = 5227.0
+offset_bottom = -3146.0
+scale = Vector2(3.33625, 3.99816)
+theme_override_fonts/font = ExtResource("5_xq75l")
+theme_override_font_sizes/font_size = 32
+text = "pause"
+icon = ExtResource("6_mbysh")
+alignment = 0
+icon_alignment = 2
+expand_icon = true
+script = ExtResource("3_rj624")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(308, 39)
+scale = Vector2(6.13619, 3.91903)
+shape = SubResource("RectangleShape2D_xouol")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 620.0
+offset_bottom = 78.0
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = 1
+offset_left = 16.0
+offset_top = 23.0
+offset_right = 56.0
+offset_bottom = 63.0
+scale = Vector2(1.85417, 0.375)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+z_index = 1
+offset_left = 504.0
+offset_top = 55.0
+offset_right = 544.0
+offset_bottom = 95.0
+scale = Vector2(1.21848, 0.234568)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+z_index = 1
+offset_left = 427.0
+offset_top = 25.0
+offset_right = 467.0
+offset_bottom = 65.0
+scale = Vector2(3.79154, -0.533331)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Timer2" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 2.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_xouol")
+
+[node name="info_label" type="Label" parent="."]
+z_index = 6
+offset_right = 618.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 25
+label_settings = SubResource("LabelSettings_xq75l")
+uppercase = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_entered" from="." to="extra(not for bars to use intentionally)/game_over" method="_on_area_2d_area_entered"]
+[connection signal="pressed" from="extra(not for bars to use intentionally)/Panel/restart" to="extra(not for bars to use intentionally)/Panel/restart" method="_on_restart_pressed"]
+[connection signal="pressed" from="extra(not for bars to use intentionally)/Panel/resume" to="extra(not for bars to use intentionally)/Panel/resume" method="_on_button_pressed"]
+[connection signal="pressed" from="extra(not for bars to use intentionally)/Panel/main menu" to="extra(not for bars to use intentionally)/Panel/main menu" method="_on_main_menu_pressed"]
+[connection signal="item_selected" from="extra(not for bars to use intentionally)/Panel/levels/OptionButton" to="extra(not for bars to use intentionally)/Panel/levels" method="_on_option_button_item_selected"]
+[connection signal="pressed" from="extra(not for bars to use intentionally)/game_over/restart" to="extra(not for bars to use intentionally)/game_over/restart" method="_on_restart_pressed"]
+[connection signal="pressed" from="extra(not for bars to use intentionally)/game_over/main menu" to="extra(not for bars to use intentionally)/game_over/main menu" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="extra(not for bars to use intentionally)/PAUSE" to="extra(not for bars to use intentionally)/PAUSE" method="_on_pressed"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

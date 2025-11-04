@@ -1,0 +1,299 @@
+[gd_scene load_steps=4 format=3 uid="uid://c323wfw2s7eww"]
+
+[ext_resource type="PackedScene" uid="uid://6rpyblpeohkd" path="res://scenes/game.tscn" id="1_b1bkj"]
+[ext_resource type="PackedScene" uid="uid://pe3cf5i5pu5a" path="res://scenes/BARS/invisible_bar.tscn" id="6_fityo"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_s0owe"]
+
+[node name="game" instance=ExtResource("1_b1bkj")]
+
+[node name="Polygon2D" parent="background" index="0"]
+texture = SubResource("ViewportTexture_s0owe")
+
+[node name="base_of_invisible_bar" parent="obstacles" index="0" instance=ExtResource("6_fityo")]
+position = Vector2(-11420, 2829)
+direction = "Right"
+
+[node name="base_of_invisible_bar2" parent="obstacles" index="1" instance=ExtResource("6_fityo")]
+position = Vector2(-12868, 2707)
+direction = "Right"
+
+[node name="base_of_invisible_bar3" parent="obstacles" index="2" instance=ExtResource("6_fityo")]
+position = Vector2(-14055, 2515)
+direction = "Right"
+
+[node name="base_of_invisible_bar4" parent="obstacles" index="3" instance=ExtResource("6_fityo")]
+position = Vector2(-15416, 2253)
+direction = "Right"
+
+[node name="base_of_invisible_bar5" parent="obstacles" index="4" instance=ExtResource("6_fityo")]
+position = Vector2(-16882, 1956)
+direction = "Right"
+
+[node name="base_of_invisible_bar6" parent="obstacles" index="5" instance=ExtResource("6_fityo")]
+position = Vector2(-18191, 1520)
+direction = "Right"
+
+[node name="base_of_invisible_bar7" parent="obstacles" index="6" instance=ExtResource("6_fityo")]
+position = Vector2(-19482, 1206)
+direction = "Right"
+
+[node name="base_of_invisible_bar8" parent="obstacles" index="7" instance=ExtResource("6_fityo")]
+position = Vector2(-10687, -975)
+direction = "Right"
+
+[node name="base_of_invisible_bar9" parent="obstacles" index="8" instance=ExtResource("6_fityo")]
+position = Vector2(-12135, -1097)
+direction = "Right"
+
+[node name="base_of_invisible_bar10" parent="obstacles" index="9" instance=ExtResource("6_fityo")]
+position = Vector2(-13322, -1289)
+direction = "Right"
+
+[node name="base_of_invisible_bar11" parent="obstacles" index="10" instance=ExtResource("6_fityo")]
+position = Vector2(-14683, -1551)
+direction = "Right"
+
+[node name="base_of_invisible_bar12" parent="obstacles" index="11" instance=ExtResource("6_fityo")]
+position = Vector2(-16149, -1848)
+direction = "Right"
+
+[node name="base_of_invisible_bar13" parent="obstacles" index="12" instance=ExtResource("6_fityo")]
+position = Vector2(-17458, -2284)
+direction = "Right"
+
+[node name="base_of_invisible_bar14" parent="obstacles" index="13" instance=ExtResource("6_fityo")]
+position = Vector2(-18749, -2598)
+direction = "Right"
+
+[node name="base_of_invisible_bar15" parent="obstacles" index="14" instance=ExtResource("6_fityo")]
+position = Vector2(-19429, 1224)
+direction = "Right"
+
+[node name="base_of_invisible_bar16" parent="obstacles" index="15" instance=ExtResource("6_fityo")]
+position = Vector2(-20961, 2310)
+direction = "Right"
+
+[node name="base_of_invisible_bar17" parent="obstacles" index="16" instance=ExtResource("6_fityo")]
+position = Vector2(-22233, 2821)
+direction = "Right"
+
+[node name="base_of_invisible_bar18" parent="obstacles" index="17" instance=ExtResource("6_fityo")]
+position = Vector2(-23792, 2224)
+direction = "Right"
+
+[node name="base_of_invisible_bar19" parent="obstacles" index="18" instance=ExtResource("6_fityo")]
+position = Vector2(-24837, 1345)
+direction = "Right"
+
+[node name="base_of_invisible_bar20" parent="obstacles" index="19" instance=ExtResource("6_fityo")]
+position = Vector2(-26029, 631)
+direction = "Right"
+
+[node name="base_of_invisible_bar21" parent="obstacles" index="20" instance=ExtResource("6_fityo")]
+position = Vector2(-27255, -25)
+direction = "Right"
+
+[node name="base_of_invisible_bar22" parent="obstacles" index="21" instance=ExtResource("6_fityo")]
+position = Vector2(-18696, -2580)
+direction = "Right"
+
+[node name="base_of_invisible_bar23" parent="obstacles" index="22" instance=ExtResource("6_fityo")]
+position = Vector2(-20144, -2702)
+direction = "Right"
+
+[node name="base_of_invisible_bar24" parent="obstacles" index="23" instance=ExtResource("6_fityo")]
+position = Vector2(-21331, -2894)
+direction = "Right"
+
+[node name="base_of_invisible_bar25" parent="obstacles" index="24" instance=ExtResource("6_fityo")]
+position = Vector2(-22692, -3156)
+direction = "Right"
+
+[node name="base_of_invisible_bar26" parent="obstacles" index="25" instance=ExtResource("6_fityo")]
+position = Vector2(-24158, -3453)
+direction = "Right"
+
+[node name="base_of_invisible_bar27" parent="obstacles" index="26" instance=ExtResource("6_fityo")]
+position = Vector2(-25333, -2411)
+direction = "Right"
+
+[node name="base_of_invisible_bar28" parent="obstacles" index="27" instance=ExtResource("6_fityo")]
+position = Vector2(-27065, -2476)
+direction = "Right"
+
+[node name="base_of_invisible_bar29" parent="obstacles" index="28" instance=ExtResource("6_fityo")]
+position = Vector2(-28414, 107)
+direction = "Right"
+
+[node name="base_of_invisible_bar30" parent="obstacles" index="29" instance=ExtResource("6_fityo")]
+position = Vector2(-29769, 201)
+direction = "Right"
+
+[node name="base_of_invisible_bar31" parent="obstacles" index="30" instance=ExtResource("6_fityo")]
+position = Vector2(-31111, 504)
+direction = "Right"
+
+[node name="base_of_invisible_bar32" parent="obstacles" index="31" instance=ExtResource("6_fityo")]
+position = Vector2(-32441, 706)
+direction = "Right"
+
+[node name="base_of_invisible_bar33" parent="obstacles" index="32" instance=ExtResource("6_fityo")]
+position = Vector2(-33938, 811)
+direction = "Right"
+
+[node name="base_of_invisible_bar34" parent="obstacles" index="33" instance=ExtResource("6_fityo")]
+position = Vector2(-35247, 838)
+direction = "Right"
+
+[node name="base_of_invisible_bar35" parent="obstacles" index="34" instance=ExtResource("6_fityo")]
+position = Vector2(-46986, 3152)
+direction = "Right"
+
+[node name="base_of_invisible_bar36" parent="obstacles" index="35" instance=ExtResource("6_fityo")]
+position = Vector2(-27990, -2430)
+direction = "Right"
+
+[node name="base_of_invisible_bar37" parent="obstacles" index="36" instance=ExtResource("6_fityo")]
+position = Vector2(-29655, -2428)
+direction = "Right"
+
+[node name="base_of_invisible_bar38" parent="obstacles" index="37" instance=ExtResource("6_fityo")]
+position = Vector2(-30811, -2311)
+direction = "Right"
+
+[node name="base_of_invisible_bar39" parent="obstacles" index="38" instance=ExtResource("6_fityo")]
+position = Vector2(-32079, -2264)
+direction = "Right"
+
+[node name="base_of_invisible_bar40" parent="obstacles" index="39" instance=ExtResource("6_fityo")]
+position = Vector2(-33638, -2128)
+direction = "Right"
+
+[node name="base_of_invisible_bar41" parent="obstacles" index="40" instance=ExtResource("6_fityo")]
+position = Vector2(-34699, -2069)
+direction = "Right"
+
+[node name="base_of_invisible_bar42" parent="obstacles" index="41" instance=ExtResource("6_fityo")]
+position = Vector2(-37474, -1518)
+direction = "Right"
+
+[node name="base_of_invisible_bar43" parent="obstacles" index="42" instance=ExtResource("6_fityo")]
+position = Vector2(-36330, 1068)
+direction = "Right"
+
+[node name="base_of_invisible_bar44" parent="obstacles" index="43" instance=ExtResource("6_fityo")]
+position = Vector2(-37893, 1659)
+direction = "Right"
+
+[node name="base_of_invisible_bar45" parent="obstacles" index="44" instance=ExtResource("6_fityo")]
+position = Vector2(-39382, 2047)
+direction = "Right"
+
+[node name="base_of_invisible_bar46" parent="obstacles" index="45" instance=ExtResource("6_fityo")]
+position = Vector2(-40972, 2377)
+direction = "Right"
+
+[node name="base_of_invisible_bar47" parent="obstacles" index="46" instance=ExtResource("6_fityo")]
+position = Vector2(-42388, 2889)
+direction = "Right"
+
+[node name="base_of_invisible_bar48" parent="obstacles" index="47" instance=ExtResource("6_fityo")]
+position = Vector2(-44043, 2855)
+direction = "Right"
+
+[node name="base_of_invisible_bar49" parent="obstacles" index="48" instance=ExtResource("6_fityo")]
+position = Vector2(-45733, 3034)
+direction = "Right"
+
+[node name="base_of_invisible_bar50" parent="obstacles" index="49" instance=ExtResource("6_fityo")]
+position = Vector2(-36185, -1809)
+direction = "Right"
+
+[node name="base_of_invisible_bar51" parent="obstacles" index="50" instance=ExtResource("6_fityo")]
+position = Vector2(-39147, -1436)
+direction = "Right"
+
+[node name="base_of_invisible_bar52" parent="obstacles" index="51" instance=ExtResource("6_fityo")]
+position = Vector2(-40365, -794)
+direction = "Right"
+
+[node name="base_of_invisible_bar53" parent="obstacles" index="52" instance=ExtResource("6_fityo")]
+position = Vector2(-42066, -190)
+direction = "Right"
+
+[node name="base_of_invisible_bar54" parent="obstacles" index="53" instance=ExtResource("6_fityo")]
+position = Vector2(-43687, 162)
+direction = "Right"
+
+[node name="base_of_invisible_bar55" parent="obstacles" index="54" instance=ExtResource("6_fityo")]
+position = Vector2(-45171, 431)
+direction = "Right"
+
+[node name="base_of_invisible_bar56" parent="obstacles" index="55" instance=ExtResource("6_fityo")]
+position = Vector2(-46996, 830)
+direction = "Right"
+
+[node name="base_of_invisible_bar57" parent="obstacles" index="56" instance=ExtResource("6_fityo")]
+position = Vector2(-59740, 1174)
+direction = "Right"
+
+[node name="base_of_invisible_bar58" parent="obstacles" index="57" instance=ExtResource("6_fityo")]
+position = Vector2(-50365, 3088)
+direction = "Right"
+
+[node name="base_of_invisible_bar59" parent="obstacles" index="58" instance=ExtResource("6_fityo")]
+position = Vector2(-48077, 2706)
+direction = "Right"
+
+[node name="base_of_invisible_bar60" parent="obstacles" index="59" instance=ExtResource("6_fityo")]
+position = Vector2(-50877, 391)
+direction = "Right"
+
+[node name="base_of_invisible_bar61" parent="obstacles" index="60" instance=ExtResource("6_fityo")]
+position = Vector2(-52366, 779)
+direction = "Right"
+
+[node name="base_of_invisible_bar62" parent="obstacles" index="61" instance=ExtResource("6_fityo")]
+position = Vector2(-53956, 1109)
+direction = "Right"
+
+[node name="base_of_invisible_bar63" parent="obstacles" index="62" instance=ExtResource("6_fityo")]
+position = Vector2(-55372, 1371)
+direction = "Right"
+
+[node name="base_of_invisible_bar64" parent="obstacles" index="63" instance=ExtResource("6_fityo")]
+position = Vector2(-56989, 1357)
+direction = "Right"
+
+[node name="base_of_invisible_bar65" parent="obstacles" index="64" instance=ExtResource("6_fityo")]
+position = Vector2(-58583, 1421)
+direction = "Right"
+
+[node name="base_of_invisible_bar66" parent="obstacles" index="65" instance=ExtResource("6_fityo")]
+position = Vector2(-49076, 2797)
+direction = "Right"
+
+[node name="base_of_invisible_bar67" parent="obstacles" index="66" instance=ExtResource("6_fityo")]
+position = Vector2(-52038, 3170)
+direction = "Right"
+
+[node name="base_of_invisible_bar68" parent="obstacles" index="67" instance=ExtResource("6_fityo")]
+position = Vector2(-48558, 627)
+direction = "Right"
+
+[node name="base_of_invisible_bar69" parent="obstacles" index="68" instance=ExtResource("6_fityo")]
+position = Vector2(-50188, 1131)
+direction = "Right"
+
+[node name="base_of_invisible_bar70" parent="obstacles" index="69" instance=ExtResource("6_fityo")]
+position = Vector2(-53116, 3037)
+direction = "Right"
+
+[node name="base_of_invisible_bar71" parent="obstacles" index="70" instance=ExtResource("6_fityo")]
+position = Vector2(-54600, 3306)
+direction = "Right"
+
+[node name="base_of_invisible_bar72" parent="obstacles" index="71" instance=ExtResource("6_fityo")]
+position = Vector2(-56483, 3244)
+direction = "Right"

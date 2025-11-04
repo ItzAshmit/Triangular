@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://rjjtvol3c4w7"]
+
+[ext_resource type="Texture2D" uid="uid://biaheyydgfcd0" path="res://assests/rotate_right.png" id="1_ojhyh"]
+[ext_resource type="Texture2D" uid="uid://bot28khgwjrdg" path="res://assests/rotate_left.png" id="2_qpxdh"]
+[ext_resource type="Texture2D" uid="uid://bivp2u37adfqu" path="res://assests/revolve_right.png" id="3_rq6v7"]
+[ext_resource type="Texture2D" uid="uid://kntue3n3h3j2" path="res://assests/revolve_left.png" id="4_gv3ke"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="rotate_right" type="TouchScreenButton" parent="."]
+position = Vector2(87, 615)
+scale = Vector2(0.103, 0.1)
+texture_normal = ExtResource("1_ojhyh")
+action = "innner_rotation_left"
+visibility_mode = 1
+
+[node name="rotate_left" type="TouchScreenButton" parent="."]
+position = Vector2(1113, 615)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("2_qpxdh")
+action = "innner_rotation_right"
+visibility_mode = 1
+
+[node name="revolve_right" type="TouchScreenButton" parent="."]
+position = Vector2(184, 499)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("3_rq6v7")
+action = "rotation_left"
+visibility_mode = 1
+
+[node name="revolve_left" type="TouchScreenButton" parent="."]
+position = Vector2(1011, 499)
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("4_gv3ke")
+action = "rotation_right"
+visibility_mode = 1

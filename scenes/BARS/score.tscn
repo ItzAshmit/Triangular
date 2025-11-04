@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://yib01x3wipqg"]
+
+[ext_resource type="PackedScene" uid="uid://d14fycutjin1n" path="res://scenes/BARS/info_bar.tscn" id="1_yp5um"]
+
+[node name="base of red bar" instance=ExtResource("1_yp5um")]
+is_score_bar = true
+
+[node name="game_over" parent="extra(not for bars to use intentionally)" index="1"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="restart" parent="extra(not for bars to use intentionally)/game_over" index="0"]
+z_index = 0
+
+[node name="ColorRect" parent="." index="2"]
+color = Color(0.988235, 0.105882, 0.0705882, 0.431373)
+
+[node name="ColorRect2" parent="." index="3"]
+color = Color(0, 0.533333, 0.54902, 0.458824)
+
+[node name="ColorRect3" parent="." index="4"]
+color = Color(0, 0, 0, 0.407843)
+
+[node name="ColorRect4" parent="." index="5"]
+color = Color(0, 0.533333, 0.54902, 0.541176)

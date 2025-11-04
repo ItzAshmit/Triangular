@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://oegu8wqx7eab"]
+
+[ext_resource type="PackedScene" uid="uid://cm2tj1dyu5qam" path="res://scenes/obstacle_template.tscn" id="1_4ctok"]
+
+[node name="Area2D" instance=ExtResource("1_4ctok")]
+collision_layer = 0
+collision_mask = 3
+speed = -2000
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(308, -27.4048)
+
+[node name="ColorRect" parent="." index="2"]
+offset_top = -137.0
+color = Color(1, 1, 1, 0)
+
+[node name="ColorRect2" parent="." index="3"]
+offset_left = 24.0
+offset_top = -34.0
+offset_right = 64.0
+offset_bottom = 6.0
+rotation = -1.57079
+color = Color(0.249882, 0.722927, 1, 1)
+
+[node name="ColorRect3" parent="." index="4"]
+offset_left = 536.0
+offset_top = 10.0
+offset_right = 576.0
+offset_bottom = 50.0
+rotation = -1.57079
+
+[node name="ColorRect4" parent="." index="5"]
+offset_left = 414.0
+offset_top = -17.0
+offset_right = 454.0
+offset_bottom = 23.0
+rotation = -1.57079
+color = Color(0.940362, 3.41728e-06, 3.85046e-07, 1)

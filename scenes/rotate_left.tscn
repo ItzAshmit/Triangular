@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqn03thas8ng0"]
+
+[ext_resource type="Texture2D" uid="uid://bot28khgwjrdg" path="res://assests/rotate_left.png" id="1_dme7q"]
+
+[node name="rotate_left" type="TouchScreenButton"]
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("1_dme7q")
+action = "innner_rotation_right"
+visibility_mode = 1

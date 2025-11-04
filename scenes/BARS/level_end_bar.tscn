@@ -1,0 +1,148 @@
+[gd_scene load_steps=5 format=3 uid="uid://l3oyijmv1xud"]
+
+[ext_resource type="PackedScene" uid="uid://cm2tj1dyu5qam" path="res://scenes/obstacle_template.tscn" id="1_ol6ke"]
+
+[sub_resource type="Animation" id="Animation_hwe8w"]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ColorRect4:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.03333, 1.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.975665, 1.27546e-06, 5.77569e-07, 1), Color(0.976471, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect3:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.517647)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../ColorRect2:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ol6ke"]
+resource_name = "color_change_1"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 1, 1, 1), Color(0, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect4:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.03),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.975665, 1.27546e-06, 5.77569e-07, 1), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../ColorRect3:color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.24),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.517647), Color(0, 0, 0.501961, 0.517647)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../ColorRect2:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4m56y"]
+_data = {
+&"RESET": SubResource("Animation_hwe8w"),
+&"color_change_1": SubResource("Animation_ol6ke")
+}
+
+[node name="Area2D" instance=ExtResource("1_ol6ke")]
+collision_layer = 0
+collision_mask = 3
+speed = -2000
+is_level_end_bar = true
+
+[node name="ColorRect" parent="." index="2"]
+z_index = 3
+offset_left = 31.0
+offset_top = 63.0
+offset_right = 52.0
+offset_bottom = 141.0
+rotation = -1.57079
+color = Color(0, 1, 1, 1)
+
+[node name="ColorRect2" parent="." index="3"]
+z_index = 2
+offset_left = 338.0
+offset_top = 49.0
+offset_right = 345.0
+offset_bottom = 76.0
+scale = Vector2(17.9093, 0.767816)
+
+[node name="ColorRect3" parent="." index="4"]
+z_index = 2
+offset_left = -4.0
+offset_top = -2.0
+offset_right = 508.0
+offset_bottom = 330.0
+color = Color(0, 0, 0, 0.517647)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+root_node = NodePath("../ColorRect")
+libraries = {
+&"": SubResource("AnimationLibrary_4m56y")
+}
+autoplay = "color_change_1"
+
+[node name="ColorRect4" parent="." index="6"]
+z_index = 3
+offset_left = 562.0
+offset_top = 33.0
+offset_right = 569.0
+offset_bottom = 181.0
+rotation = -1.57079
+color = Color(0.975665, 1.27546e-06, 5.77569e-07, 1)

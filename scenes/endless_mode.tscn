@@ -1,0 +1,238 @@
+[gd_scene load_steps=19 format=3 uid="uid://bc12v5hvw4o8r"]
+
+[ext_resource type="PackedScene" uid="uid://6rpyblpeohkd" path="res://scenes/game.tscn" id="1_geloh"]
+[ext_resource type="PackedScene" uid="uid://d14fycutjin1n" path="res://scenes/BARS/info_bar.tscn" id="2_ci4il"]
+[ext_resource type="Script" uid="uid://cojtqno7cdr3g" path="res://scriptes/close.gd" id="3_xc8o4"]
+[ext_resource type="Script" uid="uid://cjd6v3vwn4bu5" path="res://scriptes/PREMIUM_BUTTON.gd" id="4_ngx8f"]
+[ext_resource type="Script" uid="uid://cy46s4fqdb2q6" path="res://scriptes/endless_manager.gd" id="12_mgu5r"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_bi45c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlvt0"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xc8o4"]
+font_size = 512
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xc8o4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bo5a"]
+bg_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bi45c"]
+bg_color = Color(0, 1, 0, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_geloh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+shadow_color = Color(0, 1, 0, 0.423529)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7py4"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rlvt0"]
+font_size = 128
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rysoc"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kice"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_264po"]
+bg_color = Color(0.856494, 3.65794e-06, 8.66354e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca42v"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 50
+border_width_top = 50
+border_width_right = 50
+border_width_bottom = 50
+border_color = Color(0.854902, 0, 0, 1)
+border_blend = true
+
+[node name="game" instance=ExtResource("1_geloh")]
+
+[node name="background" parent="." index="0"]
+process_mode = 3
+
+[node name="Polygon2D" parent="background" index="0"]
+texture = SubResource("ViewportTexture_bi45c")
+
+[node name="PAUSE" parent="background" index="5"]
+offset_left = 4806.0
+offset_right = 5089.0
+offset_bottom = -3125.0
+
+[node name="levels" parent="background/Panel" index="3"]
+visible = false
+
+[node name="OptionButton" parent="background/Panel" index="4"]
+visible = false
+
+[node name="Label" type="Label" parent="background/Panel" index="5"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 228.00003
+offset_top = 65.00001
+offset_right = 441.62555
+offset_bottom = 457.9707
+scale = Vector2(0.36322328, 0.3927614)
+theme_override_font_sizes/font_size = 128
+theme_override_styles/normal = SubResource("StyleBoxFlat_rlvt0")
+text = "jjjjjjjjjjjjjjj"
+label_settings = SubResource("LabelSettings_xc8o4")
+
+[node name="Panel2" type="Panel" parent="background" index="7"]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+offset_left = -4535.0
+offset_top = 3965.0
+offset_right = -4401.0
+offset_bottom = 4046.0
+scale = Vector2(23.5695, 28.1077)
+theme_override_styles/panel = SubResource("StyleBoxFlat_xc8o4")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="background/Panel2" index="0"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.05816
+anchor_top = -0.71067
+anchor_right = 10.8343
+anchor_bottom = 1.19056
+offset_right = 851.0
+offset_bottom = 154.0
+scale = Vector2(0.137524, 0.107465)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 170
+theme_override_styles/normal = SubResource("StyleBoxFlat_7bo5a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bi45c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_geloh")
+text = "Unlock everything"
+script = ExtResource("4_ngx8f")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="background/Panel2" index="1"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.333406
+anchor_top = -2.1386
+anchor_right = 5.45017
+anchor_bottom = -0.237372
+offset_right = 851.0
+offset_bottom = 154.0
+scale = Vector2(0.137524, 0.107465)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 170
+theme_override_styles/normal = SubResource("StyleBoxFlat_7bo5a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bi45c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_geloh")
+text = "Play more"
+script = ExtResource("4_ngx8f")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="background/Panel2" index="2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0430781
+anchor_top = -1.1096
+anchor_right = -0.0430781
+anchor_bottom = -1.1096
+offset_right = 259.0
+offset_bottom = 107.0
+scale = Vector2(0.155502, 0.142245)
+theme_override_styles/panel = SubResource("StyleBoxFlat_g7py4")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="background/Panel2/Panel2" index="0"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.59502
+anchor_top = -6.64081
+anchor_right = 10.9348
+anchor_bottom = -3.70625
+offset_left = -7.31869
+offset_top = 711.63
+offset_right = 460.681
+offset_bottom = 865.63
+scale = Vector2(0.799579, 0.78694)
+text = "Sorry but you have to
+buy the premiem version"
+label_settings = SubResource("LabelSettings_rlvt0")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="background/Panel2/Panel2" index="1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.952447
+anchor_top = -10.0559
+anchor_right = 5.63829
+anchor_bottom = -7.12141
+offset_left = -7.31869
+offset_top = 711.63
+offset_right = 460.681
+offset_bottom = 865.63
+scale = Vector2(0.799579, 0.78694)
+text = "Play more for 300 points
+only with a small ad"
+label_settings = SubResource("LabelSettings_rlvt0")
+metadata/_edit_use_anchors_ = true
+
+[node name="restart2" type="Button" parent="background/Panel2" index="3"]
+z_index = 5
+layout_mode = 0
+offset_left = -45.2704
+offset_top = -257.047
+offset_right = 1624.73
+offset_bottom = 58.953
+scale = Vector2(0.0470631, 0.0440459)
+theme_override_font_sizes/font_size = 256
+theme_override_styles/normal = SubResource("StyleBoxFlat_rysoc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1kice")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1kice")
+text = "RESTART?"
+script = ExtResource("3_xc8o4")
+
+[node name="main menu2" type="Button" parent="background/Panel2" index="4"]
+z_index = 5
+layout_mode = 0
+offset_left = 58.0
+offset_top = -257.0
+offset_right = 2090.0
+offset_bottom = 59.0
+scale = Vector2(0.038359, 0.0433244)
+theme_override_font_sizes/font_size = 256
+theme_override_styles/normal = SubResource("StyleBoxFlat_264po")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ca42v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ca42v")
+text = "main menu?"
+script = ExtResource("3_xc8o4")
+
+[node name="base of red bar2" parent="obstacles" index="0" instance=ExtResource("2_ci4il")]
+position = Vector2(6075, -2971)
+scale = Vector2(10.0632, 7.75709)
+text = "lets see how far can you go"
+
+[node name="ENDLESS_MANAGER" type="Node" parent="." index="7"]
+script = ExtResource("12_mgu5r")
+
+[connection signal="pressed" from="background/Panel2/Button" to="background/Panel2/Button" method="_on_pressed"]
+[connection signal="pressed" from="background/Panel2/Button2" to="background/Panel2/Button2" method="_on_Admob_pressed"]
+[connection signal="pressed" from="background/Panel2/restart2" to="background/Panel2/restart2" method="_on_restart_pressed"]
+[connection signal="pressed" from="background/Panel2/main menu2" to="background/Panel2/main menu2" method="_on_main_menu_pressed"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpec5533nq6h0"]
+
+[ext_resource type="Script" uid="uid://bhahyk6rgbfpg" path="res://scriptes/firebase.gd" id="1_xhmun"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_xhmun")

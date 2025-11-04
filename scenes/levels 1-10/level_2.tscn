@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvbh6t6nicrfv"]
+
+[ext_resource type="PackedScene" uid="uid://6rpyblpeohkd" path="res://scenes/game.tscn" id="1_r3ldt"]
+[ext_resource type="PackedScene" uid="uid://irugkrmftm02" path="res://scenes/BARS/blue_bar.tscn" id="2_77c0h"]
+[ext_resource type="PackedScene" uid="uid://dn36f5tu6b7ye" path="res://scenes/BARS/red_bar.tscn" id="3_pbnod"]
+[ext_resource type="PackedScene" uid="uid://l3oyijmv1xud" path="res://scenes/BARS/level_end_bar.tscn" id="4_pbnod"]
+[ext_resource type="PackedScene" uid="uid://oegu8wqx7eab" path="res://scenes/BARS/ending_bar.tscn" id="5_604e0"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5hwrl"]
+
+[node name="game" instance=ExtResource("1_r3ldt")]
+metadata/_edit_horizontal_guides_ = [70730.0, 94538.0]
+metadata/_edit_vertical_guides_ = [-36892.0, 7296.0, -6528.0, 5989.0, -5659.0]
+
+[node name="Polygon2D" parent="background" index="0"]
+texture = SubResource("ViewportTexture_5hwrl")
+
+[node name="base of blue bar" parent="obstacles" index="0" instance=ExtResource("2_77c0h")]
+position = Vector2(-4037, 34207)
+rotation = -1.57079
+scale = Vector2(9.98943, 19.1205)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+
+[node name="base of blue bar2" parent="obstacles" index="1" instance=ExtResource("2_77c0h")]
+position = Vector2(2511, 42170)
+scale = Vector2(2.85145, -80.1353)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2600
+
+[node name="base of red bar" parent="obstacles" index="2" instance=ExtResource("3_pbnod")]
+position = Vector2(-2018.0001, 70044)
+scale = Vector2(5.8093, 8.77806)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2400
+direction = "Up"
+
+[node name="base of blue bar3" parent="obstacles" index="3" instance=ExtResource("2_77c0h")]
+position = Vector2(5369, 59305)
+rotation = 1.57079
+scale = Vector2(8.02344, 24.2346)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2300
+direction = "Up"
+
+[node name="base of red bar2" parent="obstacles" index="4" instance=ExtResource("3_pbnod")]
+position = Vector2(4325, 20845)
+rotation = 3.14159
+scale = Vector2(3.57089, -102.267)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2500
+direction = "Up"
+
+[node name="base of red bar3" parent="obstacles" index="5" instance=ExtResource("3_pbnod")]
+position = Vector2(-3486, 56601)
+scale = Vector2(1.59707, 30.8916)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+
+[node name="base of red bar5" parent="obstacles" index="6" instance=ExtResource("3_pbnod")]
+position = Vector2(-3295, 13952)
+scale = Vector2(1.32861, 51.2358)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2100
+direction = "Up"
+
+[node name="base of red bar4" parent="obstacles" index="7" instance=ExtResource("3_pbnod")]
+position = Vector2(-114, 53057)
+rotation = -1.57079
+scale = Vector2(9.35781, 10.912)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2500
+
+[node name="base of blue bar4" parent="obstacles" index="8" instance=ExtResource("2_77c0h")]
+position = Vector2(-87.9999, 16307)
+scale = Vector2(1.5321, 27.4916)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2200
+direction = "Up"
+
+[node name="base of red bar6" parent="obstacles" index="9" instance=ExtResource("3_pbnod")]
+position = Vector2(-3617, 71356)
+scale = Vector2(2.4822, 93.4735)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2400
+direction = "Up"
+
+[node name="base of blue bar5" parent="obstacles" index="10" instance=ExtResource("2_77c0h")]
+position = Vector2(-3549, 48086)
+rotation = -1.57079
+scale = Vector2(6.59222, 10.5685)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+direction = "Up"
+
+[node name="base of blue bar6" parent="obstacles" index="11" instance=ExtResource("2_77c0h")]
+position = Vector2(4108, 8032)
+rotation = 3.14159
+scale = Vector2(1.86042, -27.2346)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2200
+direction = "Up"
+
+[node name="base of blue bar7" parent="obstacles" index="12" instance=ExtResource("2_77c0h")]
+position = Vector2(2980, 73566)
+scale = Vector2(2.79024, 75.682)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2400
+direction = "Up"
+
+[node name="Area2D" parent="obstacles" index="13" instance=ExtResource("4_pbnod")]
+position = Vector2(-924, 82277)
+rotation = 1.57079
+scale = Vector2(12.4294, -23.1083)
+gravity_point = false
+gravity_point_unit_distance = 0.0
+speed = -2400
+direction = "Up"
+
+[node name="Area2D2" parent="obstacles" index="14" instance=ExtResource("5_604e0")]
+position = Vector2(5879, 123963)
+rotation = -3.14159
+scale = Vector2(18.3536, 15.5529)
+direction = "Up"

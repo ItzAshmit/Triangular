@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://caid1su1bq1aq"]
+
+[ext_resource type="AudioStream" uid="uid://jw1iyqbcyvbu" path="res://assests/Jungle Trip - Quincas Moreira.ogg" id="1_1udxr"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer"]
+stream = ExtResource("1_1udxr")
+autoplay = true
+bus = &"music"

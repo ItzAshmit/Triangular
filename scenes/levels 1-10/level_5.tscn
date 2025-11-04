@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgbe0oo00eoq1"]
+
+[ext_resource type="PackedScene" uid="uid://6rpyblpeohkd" path="res://scenes/game.tscn" id="1_53waa"]
+[ext_resource type="PackedScene" uid="uid://irugkrmftm02" path="res://scenes/BARS/blue_bar.tscn" id="2_qe06y"]
+[ext_resource type="PackedScene" uid="uid://dn36f5tu6b7ye" path="res://scenes/BARS/red_bar.tscn" id="3_3wkii"]
+[ext_resource type="PackedScene" uid="uid://l3oyijmv1xud" path="res://scenes/BARS/level_end_bar.tscn" id="4_3wkii"]
+[ext_resource type="PackedScene" uid="uid://oegu8wqx7eab" path="res://scenes/BARS/ending_bar.tscn" id="5_32q37"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_425r1"]
+
+[node name="game" instance=ExtResource("1_53waa")]
+
+[node name="Polygon2D" parent="background" index="0"]
+texture = SubResource("ViewportTexture_425r1")
+
+[node name="base of red bar" parent="obstacles" index="0" instance=ExtResource("3_3wkii")]
+position = Vector2(3.99997, 9487)
+rotation = -1.57079
+scale = Vector2(5.28159, 9.31291)
+direction = "Up"
+
+[node name="base of blue bar2" parent="obstacles" index="1" instance=ExtResource("2_qe06y")]
+position = Vector2(9671, 78)
+rotation = -1.57079
+scale = Vector2(0.829278, 23.1253)
+
+[node name="base of blue bar3" parent="obstacles" index="2" instance=ExtResource("2_qe06y")]
+position = Vector2(-9132, 78)
+rotation = 1.57079
+scale = Vector2(0.829278, 23.1253)
+direction = "Right"
+
+[node name="base of red bar2" parent="obstacles" index="3" instance=ExtResource("3_3wkii")]
+position = Vector2(4, -8010)
+rotation = 1.57079
+scale = Vector2(5.29617, 9.01952)
+direction = "Down"
+
+[node name="base of red bar3" parent="obstacles" index="4" instance=ExtResource("3_3wkii")]
+position = Vector2(-19189, -1874)
+scale = Vector2(3.40285, 6.23609)
+direction = "Right"
+
+[node name="base of blue bar" parent="obstacles" index="5" instance=ExtResource("2_qe06y")]
+position = Vector2(19309, -1874)
+scale = Vector2(2.8281, 5.93515)
+
+[node name="base of blue bar4" parent="obstacles" index="6" instance=ExtResource("2_qe06y")]
+position = Vector2(-28350, 566)
+scale = Vector2(5.08063, 6.26459)
+speed = -3000
+direction = "Right"
+
+[node name="base of red bar4" parent="obstacles" index="7" instance=ExtResource("3_3wkii")]
+position = Vector2(-25910, -1525)
+scale = Vector2(5.13914, 6.40735)
+speed = -2500
+direction = "Right"
+
+[node name="base of blue bar5" parent="obstacles" index="8" instance=ExtResource("2_qe06y")]
+position = Vector2(-5344, 11389)
+scale = Vector2(6.55396, 6.01617)
+direction = "Up"
+
+[node name="base of red bar5" parent="obstacles" index="9" instance=ExtResource("3_3wkii")]
+position = Vector2(4222, -11363)
+scale = Vector2(0.896768, -45.6448)
+direction = "Down"
+
+[node name="base of blue bar6" parent="obstacles" index="10" instance=ExtResource("2_qe06y")]
+position = Vector2(26112, 1283)
+scale = Vector2(4.63248, 7.30786)
+speed = -4000
+
+[node name="base of blue bar7" parent="obstacles" index="11" instance=ExtResource("2_qe06y")]
+position = Vector2(-3248, -27904)
+rotation = -1.57079
+scale = Vector2(23.3898, 7.57026)
+direction = "Down"
+
+[node name="base of red bar6" parent="obstacles" index="12" instance=ExtResource("3_3wkii")]
+position = Vector2(34386, -1322)
+scale = Vector2(42.0388, 7.37985)
+
+[node name="base of blue bar8" parent="obstacles" index="13" instance=ExtResource("2_qe06y")]
+position = Vector2(-51863, 1520)
+scale = Vector2(17.5327, 7.82177)
+direction = "Right"
+
+[node name="base of red bar7" parent="obstacles" index="14" instance=ExtResource("3_3wkii")]
+position = Vector2(-41161, 1521)
+scale = Vector2(18.3342, 7.90668)
+direction = "Right"
+
+[node name="Area2D" parent="obstacles" index="15" instance=ExtResource("4_3wkii")]
+position = Vector2(44185, -2409)
+scale = Vector2(8.30841, 10.7427)
+
+[node name="Area2D2" parent="obstacles" index="16" instance=ExtResource("5_32q37")]
+position = Vector2(89029, -4108)
+rotation = 1.57079
+scale = Vector2(8.84977, 15.456)

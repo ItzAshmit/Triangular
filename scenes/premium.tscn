@@ -1,0 +1,282 @@
+[gd_scene load_steps=14 format=3 uid="uid://ds6ndte508pa1"]
+
+[ext_resource type="PackedScene" uid="uid://6rpyblpeohkd" path="res://scenes/game.tscn" id="1_xjf8s"]
+[ext_resource type="PackedScene" uid="uid://d14fycutjin1n" path="res://scenes/BARS/info_bar.tscn" id="2_kp0bj"]
+[ext_resource type="Script" uid="uid://cjd6v3vwn4bu5" path="res://scriptes/PREMIUM_BUTTON.gd" id="3_kp0bj"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3fucu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjf8s"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 1, 0, 1)
+shadow_color = Color(0, 1, 0.580392, 0.545098)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fucu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 1, 0.580392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kp0bj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 1, 0.596078, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fn75h"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 1, 0, 1)
+shadow_color = Color(0, 1, 0.580392, 0.545098)
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4eie"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 1, 0.580392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3acx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 1, 0.596078, 1)
+border_blend = true
+
+[sub_resource type="Animation" id="Animation_3fucu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/Polygon2D2:invert_enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background/Polygon2D3:invert_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("background/Polygon2D4:invert_enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_kp0bj"]
+resource_name = "bg animation"
+length = 9.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/Polygon2D2:invert_enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background/Polygon2D3:invert_enabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.03333, 6.02),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("background/Polygon2D4:invert_enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4.03333, 7.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s3acx"]
+_data = {
+&"RESET": SubResource("Animation_3fucu"),
+&"bg animation": SubResource("Animation_kp0bj")
+}
+
+[node name="game" instance=ExtResource("1_xjf8s")]
+
+[node name="Polygon2D" parent="background" index="0"]
+position = Vector2(-178, -595)
+texture = SubResource("ViewportTexture_3fucu")
+
+[node name="Polygon2D2" parent="background" index="1"]
+invert_enabled = true
+
+[node name="Polygon2D3" parent="background" index="2"]
+invert_enabled = true
+
+[node name="Polygon2D4" parent="background" index="3"]
+invert_enabled = true
+
+[node name="player" parent="." index="1"]
+visible = false
+
+[node name="blue_collision" parent="player" index="0"]
+collision_layer = 0
+
+[node name="red_collision" parent="player" index="1"]
+collision_layer = 0
+
+[node name="base of red bar" parent="obstacles" index="0" instance=ExtResource("2_kp0bj")]
+position = Vector2(-5409, -1650)
+scale = Vector2(6.12207, 7.18268)
+text = "sorry but you have to "
+speed = 0
+
+[node name="base of red bar4" parent="obstacles" index="1" instance=ExtResource("2_kp0bj")]
+position = Vector2(-9425, -7708)
+scale = Vector2(6.12207, 7.18268)
+text = "Sorry but this is a"
+speed = 0
+
+[node name="base of red bar5" parent="obstacles" index="2" instance=ExtResource("2_kp0bj")]
+position = Vector2(-2871, -7748)
+scale = Vector2(6.12207, 7.18268)
+text = "Demo i hope"
+speed = 0
+
+[node name="base of red bar8" parent="obstacles" index="3" instance=ExtResource("2_kp0bj")]
+position = Vector2(-5565, 1077)
+scale = Vector2(6.82754, 7.36089)
+text = "Or you can play"
+speed = 0
+
+[node name="base of red bar9" parent="obstacles" index="4" instance=ExtResource("2_kp0bj")]
+position = Vector2(-1292, 1333)
+scale = Vector2(10.5314, 8.80015)
+text = "one more level by"
+speed = 0
+
+[node name="base of red bar10" parent="obstacles" index="5" instance=ExtResource("2_kp0bj")]
+position = Vector2(-4911, 2278)
+scale = Vector2(6.66257, 6.29254)
+text = "watching an ad"
+speed = 0
+
+[node name="base of red bar6" parent="obstacles" index="6" instance=ExtResource("2_kp0bj")]
+position = Vector2(-7525, -7406)
+scale = Vector2(6.12207, 7.18268)
+text = "You will buy the game"
+speed = 0
+
+[node name="base of red bar7" parent="obstacles" index="7" instance=ExtResource("2_kp0bj")]
+position = Vector2(-2009, -2331)
+scale = Vector2(6.12207, 7.18268)
+text = "Thanks"
+speed = 0
+
+[node name="base of red bar2" parent="obstacles" index="8" instance=ExtResource("2_kp0bj")]
+position = Vector2(-1767, -1005)
+scale = Vector2(7.13323, 7.33083)
+text = "spend some money to "
+speed = 0
+
+[node name="base of red bar3" parent="obstacles" index="9" instance=ExtResource("2_kp0bj")]
+position = Vector2(2143, -1458)
+scale = Vector2(4.5082, 5.62759)
+text = "play more"
+speed = 0
+
+[node name="Button" type="Button" parent="obstacles" index="10"]
+unique_name_in_owner = true
+z_index = 1
+offset_left = -1548.0
+offset_top = -1759.0
+offset_right = -685.0
+offset_bottom = -1599.0
+scale = Vector2(4.11906, 4.04921)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjf8s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3fucu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kp0bj")
+text = "Buy premium"
+script = ExtResource("3_kp0bj")
+
+[node name="Button2" type="Button" parent="obstacles" index="11"]
+unique_name_in_owner = true
+z_index = 1
+offset_left = 194.0
+offset_top = 2514.0
+offset_right = 1057.0
+offset_bottom = 2674.0
+scale = Vector2(4.11906, 4.04921)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_fn75h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c4eie")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s3acx")
+text = "Play more!!!"
+script = ExtResource("3_kp0bj")
+
+[node name="revolve_left" parent="touch_screen" index="0"]
+visible = false
+
+[node name="revolve_right" parent="touch_screen" index="1"]
+visible = false
+
+[node name="rotate_left" parent="touch_screen" index="2"]
+visible = false
+
+[node name="rotate_right" parent="touch_screen" index="3"]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="7"]
+libraries = {
+&"": SubResource("AnimationLibrary_s3acx")
+}
+autoplay = "bg animation"
+
+[connection signal="pressed" from="obstacles/Button" to="obstacles/Button" method="_on_pressed"]
+[connection signal="pressed" from="obstacles/Button2" to="obstacles/Button" method="_on_Admob_pressed"]

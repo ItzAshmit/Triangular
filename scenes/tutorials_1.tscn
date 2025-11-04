@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://mscewq7qs478"]
+
+[ext_resource type="PackedScene" uid="uid://6rpyblpeohkd" path="res://scenes/game.tscn" id="1_ee8ak"]
+[ext_resource type="PackedScene" uid="uid://d14fycutjin1n" path="res://scenes/BARS/info_bar.tscn" id="2_ifyd4"]
+[ext_resource type="PackedScene" uid="uid://dn36f5tu6b7ye" path="res://scenes/BARS/red_bar.tscn" id="3_kyhok"]
+[ext_resource type="PackedScene" uid="uid://irugkrmftm02" path="res://scenes/BARS/blue_bar.tscn" id="4_1eyut"]
+[ext_resource type="PackedScene" uid="uid://l3oyijmv1xud" path="res://scenes/BARS/level_end_bar.tscn" id="5_u6f1g"]
+[ext_resource type="PackedScene" uid="uid://oegu8wqx7eab" path="res://scenes/BARS/ending_bar.tscn" id="6_rvsgw"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ru0yc"]
+
+[node name="game" instance=ExtResource("1_ee8ak")]
+
+[node name="Polygon2D" parent="background" index="0"]
+texture = SubResource("ViewportTexture_ru0yc")
+
+[node name="base of red bar" parent="obstacles" index="0" instance=ExtResource("2_ifyd4")]
+position = Vector2(5806, -2766)
+scale = Vector2(14.7537, 12.5261)
+text = "Welcome to Triangular"
+
+[node name="base of red bar2" parent="obstacles" index="1" instance=ExtResource("2_ifyd4")]
+position = Vector2(15923, 138)
+scale = Vector2(11.0416, 12.6791)
+text = "there is something to know"
+
+[node name="base of red bar3" parent="obstacles" index="2" instance=ExtResource("2_ifyd4")]
+position = Vector2(23020, -1838)
+scale = Vector2(8.91903, 9.02068)
+text = "about the game like "
+
+[node name="base of red bar4" parent="obstacles" index="3" instance=ExtResource("2_ifyd4")]
+position = Vector2(29740, -46)
+scale = Vector2(13.7019, 15.6112)
+text = "the red part of the triangle"
+
+[node name="base of red bar5" parent="obstacles" index="4" instance=ExtResource("2_ifyd4")]
+position = Vector2(40406, -1878)
+scale = Vector2(15.7192, 14.2592)
+text = "can touch red bars"
+
+[node name="base of red bar6" parent="obstacles" index="5" instance=ExtResource("2_ifyd4")]
+position = Vector2(52573, 575)
+scale = Vector2(14.5117, 17.8077)
+text = "same with the blue part "
+
+[node name="base of red bar7" parent="obstacles" index="6" instance=ExtResource("2_ifyd4")]
+position = Vector2(64845, -1951)
+scale = Vector2(12.4305, 14.1452)
+text = "lets test you out"
+
+[node name="base of red bar8" parent="obstacles" index="7" instance=ExtResource("3_kyhok")]
+position = Vector2(76218, -2508)
+scale = Vector2(2.91558, 52.2146)
+
+[node name="base of blue bar2" parent="obstacles" index="8" instance=ExtResource("4_1eyut")]
+position = Vector2(88021, -1858)
+scale = Vector2(0.430044, 62.6686)
+
+[node name="base of red bar9" parent="obstacles" index="9" instance=ExtResource("2_ifyd4")]
+position = Vector2(92933, -2750)
+scale = Vector2(15.0248, 13.1004)
+text = "great, but things will be "
+
+[node name="base of red bar10" parent="obstacles" index="10" instance=ExtResource("2_ifyd4")]
+position = Vector2(102308, -1842)
+scale = Vector2(12.3492, 14.2263)
+text = "difficult soon "
+
+[node name="base of red bar11" parent="obstacles" index="11" instance=ExtResource("2_ifyd4")]
+position = Vector2(113139, -2560)
+scale = Vector2(9.80071, 9.42323)
+text = "also collide"
+
+[node name="base of red bar12" parent="obstacles" index="12" instance=ExtResource("2_ifyd4")]
+position = Vector2(122577, -1469)
+scale = Vector2(10.6157, 8.78901)
+text = "with this bar to get to"
+
+[node name="base of red bar13" parent="obstacles" index="13" instance=ExtResource("2_ifyd4")]
+position = Vector2(128444, 1127)
+scale = Vector2(13.6339, 13.682)
+text = "next level "
+
+[node name="Area2D" parent="obstacles" index="14" instance=ExtResource("5_u6f1g")]
+position = Vector2(136782, -981)
+scale = Vector2(9.52835, 14.0454)
+
+[node name="Area2D2" parent="obstacles" index="15" instance=ExtResource("6_rvsgw")]
+position = Vector2(151349, -3394)
+rotation = 1.57079
+scale = Vector2(11.0766, 13.9094)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bss5500nlqyos"]
+
+[ext_resource type="Texture2D" uid="uid://kntue3n3h3j2" path="res://assests/revolve_left.png" id="1_lmvm1"]
+
+[node name="revolve_left" type="TouchScreenButton"]
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("1_lmvm1")
+action = "rotation_right"
+visibility_mode = 1

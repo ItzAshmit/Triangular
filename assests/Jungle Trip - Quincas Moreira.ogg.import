@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://jw1iyqbcyvbu"
+path="res://.godot/imported/Jungle Trip - Quincas Moreira.ogg-67a97f91156495c958327797aaa45949.oggvorbisstr"
+
+[deps]
+
+source_file="res://assests/Jungle Trip - Quincas Moreira.ogg"
+dest_files=["res://.godot/imported/Jungle Trip - Quincas Moreira.ogg-67a97f91156495c958327797aaa45949.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
