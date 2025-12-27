@@ -1,9 +1,10 @@
+@tool
 extends Button
-
 
 
 func _ready() -> void:
 	Global.Show_ads()
+
 
 
 
